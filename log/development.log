@@ -263,3 +263,98 @@ Processing by MoviesController#show as HTML
 Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-30 16:42:08 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-30 16:42:09 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-30 16:42:15 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2017-05-30 16:42:37 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/config
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/images
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/javascripts
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/stylesheets
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/vendor/assets/javascripts
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/vendor/assets/stylesheets
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/actioncable-5.1.1/lib/assets/compiled
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/actionview-5.1.1/lib/assets/compiled
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/node_modules):
+    4:     <title>MovieApp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___456706759763981854_70225992932700'
+Started GET "/movies" for 127.0.0.1 at 2017-05-30 16:45:34 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/config
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/images
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/javascripts
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/app/assets/stylesheets
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/vendor/assets/javascripts
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/vendor/assets/stylesheets
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/actioncable-5.1.1/lib/assets/compiled
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/actionview-5.1.1/lib/assets/compiled
+  /Users/mahmoudbachir/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/mahmoudbachir/wdi/52-project3/watchlist/node_modules):
+    4:     <title>MovieApp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___456706759763981854_70226049591260'
+Started GET "/movies" for 127.0.0.1 at 2017-05-30 16:45:50 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 358ms (Views: 345.0ms | ActiveRecord: 1.0ms)
+
+
