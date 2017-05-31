@@ -1100,3 +1100,27 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-30 19:07:54 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.7ms) [cache miss]
+  Rendered devise/registrations/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 108ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-30 21:51:22 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.7ms) [cache miss]
+  Rendered devise/registrations/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 82ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-05-31 11:35:20 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.2ms) [cache miss]
+  Rendered devise/registrations/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 114ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
