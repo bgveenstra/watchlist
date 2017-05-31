@@ -14,12 +14,6 @@
  *= require_self
  */
 
-
-.label {
-	color: black;
-	text-align: center;
-}
-
 .footer {
 	text-align: center;
 	padding-top: 50px;
