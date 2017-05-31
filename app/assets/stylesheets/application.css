@@ -13,3 +13,10 @@
  *= require bootstrap.min
  *= require_self
  */
+
+
+.label {
+	color: red;
+	text-align: center;
+}
+
