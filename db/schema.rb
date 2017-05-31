@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530232257) do
+ActiveRecord::Schema.define(version: 20170531001857) do
+
+  create_table "lists", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "count"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "movie_lists", force: :cascade do |t|
+    t.integer "movie_id"
+    t.integer "list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
@@ -20,6 +36,14 @@ ActiveRecord::Schema.define(version: 20170530232257) do
     t.integer "runtime"
     t.integer "rating"
     t.integer "list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_movies", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "movie_id"
+    t.integer "my_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,6 +59,8 @@ ActiveRecord::Schema.define(version: 20170530232257) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "name"
+    t.string "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
