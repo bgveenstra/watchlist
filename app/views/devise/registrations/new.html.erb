@@ -1,12 +1,25 @@
+ <div class="nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        1
+        </div>
+        <div class="col-md-2 float-right">
+        2
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h1>LEFT</h1>
+      <h1>Welcome to Watchlist!</h1>
     </div>
 
     <div class="col-md-6 float-right">
-      <p>Already an user?<%= render "devise/shared/links" %></p>
-
       <div class="form">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
@@ -38,16 +51,21 @@
             <div class="label"><%= f.label :zip %><br /></div>
             <%= f.text_field :email, autofocus: true %>
           </div>
-        
+        <br>
           <div class="actions">
             <%= f.submit "Sign up" %>
           </div>
+        <br>
+          <p>Already an user?<%= render "devise/shared/links" %></p>
         <% end %>
 
       </div>
     </div>
   </div>
 </div>
-<div class="footer">
 
+ 
+
+<div class="footer">
+THIS IS THE FOOTER
 </div>
