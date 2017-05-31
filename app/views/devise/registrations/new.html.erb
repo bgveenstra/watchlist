@@ -7,11 +7,6 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :email, autofocus: true %>
-    </div>
-
-    <div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %>
     </div>
@@ -27,6 +22,16 @@
     <div class="field">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+    <!-- Change f.text_field to :name -->
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :email, autofocus: true %>
+    </div>
+    <!-- Change f.text_field to :zip -->
+    <div class="field">
+      <%= f.label :zip %><br />
+      <%= f.text_field :email, autofocus: true %>
     </div>
 
     <div class="actions">
