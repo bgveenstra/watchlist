@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20170531001857) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.string "director"
-    t.string "synopsis"
-    t.integer "year"
-    t.integer "runtime"
-    t.integer "rating"
-    t.integer "list_id"
+    t.string "title" # "original_title"
+    t.string "director" # nil
+    t.string "synopsis" # "overview"
+    t.integer "year" # t.string "release_date"
+    t.integer "runtime" # same
+    t.integer "rating" # "vote_average" or "vote_count"
+    t.integer "list_id" # "id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
