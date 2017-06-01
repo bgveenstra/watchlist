@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170531001857) do
   end
 
   create_table "movies", force: :cascade do |t|
+
     t.string "title"
     t.string "director"
     t.string "synopsis"

@@ -36,6 +36,8 @@ gem 'devise', '~> 4.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# themoviedb-api
+gem 'themoviedb-api'
 
 
 group :development, :test do
