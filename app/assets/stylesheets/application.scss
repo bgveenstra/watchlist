@@ -14,6 +14,12 @@
  *= require_self
  */
 
+.form {
+	.field {
+		color: blue;
+	}
+}
+
 .footer {
 	text-align: center;
 	padding-top: 50px;
@@ -25,4 +31,18 @@
 
 #signup {
 
+}
+
+.nav {
+	h1 {
+		color: violet;
+	}
+
+	.notice {
+		color: red;
+	}
+
+	.alert {
+		color: red;
+	}
 }
