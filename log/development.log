@@ -3643,3 +3643,11 @@ Processing by RegistrationsController#new as HTML
 Completed 200 OK in 115ms (Views: 106.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-01 10:57:53 -0700
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms) [cache miss]
+  Rendered devise/registrations/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+

@@ -26,7 +26,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
-
+    <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Proceed to Next
+    </a>
+    <div class="collapse" id="collapseExample">
+      <div class="well>
         <!-- Change f.text_field to :name -->
         <div class="field">
           <%= f.label :name %><br />
@@ -41,7 +45,8 @@
           <%= f.submit "Sign up" %>
         </div>
 
-    
+      </div>
+    </div>
 
   <% end %>
 
