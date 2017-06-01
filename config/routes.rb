@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  # get 'users/show'
 
-  root "application#index"
+  # root "application#index"
 
+  devise_for :users
   resources :movies
   resources :users, only: [:show]
-  devise_for :users
+  get 'users/show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
