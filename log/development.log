@@ -3522,3 +3522,19 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-01 09:15:43 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (3.8ms) [cache miss]
+  Rendered devise/registrations/new.html.erb within layouts/devise (41.0ms)
+Completed 200 OK in 256ms (Views: 241.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-01 09:16:57 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms) [cache miss]
+  Rendered devise/registrations/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
