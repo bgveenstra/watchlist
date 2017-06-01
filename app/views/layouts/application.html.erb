@@ -10,15 +10,25 @@
 
   <body>
 
-	<li><%= link_to "Profile", current_user %></li>
-    <strong><%= link_to "Sign up", new_user_registration_path %></strong>
-    <strong><%= link_to "Sign in", new_user_session_path %></strong>
+
+
+<div class="nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        Watchlist
+        </div>
+        <div class="col-md-2 float-right">
+           <strong><%= link_to "Sign up", new_user_registration_path %></strong>
+    <strong><%= link_to "Login", new_user_session_path %></strong>
     <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <h1>TEST BRANCH</h1>
-
+        </div>
+      </div>
+    </div>
+  </div>
+    
     <%= yield %>
   </body>
 </html>
