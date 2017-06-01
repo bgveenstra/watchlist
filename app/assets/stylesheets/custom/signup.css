@@ -12,17 +12,13 @@
  *
  *= require bootstrap.min
  *= require_self
+ *= require_tree
  */
 
-.footer {
-	text-align: center;
-	padding-top: 50px;
-}
+ body {
+ 	background-color: black;
+ }
 
-.container {
-	padding-top: 30px;
-}
-
-#signup {
-
-}
+ h1 {
+ 	color: red;
+ }

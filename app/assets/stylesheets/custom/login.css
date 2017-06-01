@@ -13,16 +13,3 @@
  *= require bootstrap.min
  *= require_self
  */
-
-.footer {
-	text-align: center;
-	padding-top: 50px;
-}
-
-.container {
-	padding-top: 30px;
-}
-
-#signup {
-
-}
