@@ -1,6 +1,7 @@
 class MovieList < ApplicationRecord
 
-	belongs_to :movies
-	belongs_to :lists
+	# JOIN TABLE
+	belongs_to :movie # foreign_key is movie_id
+	belongs_to :list # foreign_key is list_id
 	
 end
