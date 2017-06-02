@@ -10,12 +10,26 @@
 
   <body>
 
-    <strong><%= link_to "Profile", current_user %></strong>
-    <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <h1>TEST BRANCH</h1>
+<div class="nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        <h1>Watchlist</h1>
+        </div>
+        <div class="col-md-2 float-right">
+        
+        <%- if user_signed_in? %>
+          <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
+          <% else %>
+            <strong><%= link_to "Login", new_user_session_path %></strong>
+        <% end %> 
+            
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <%= yield %>
   </body>

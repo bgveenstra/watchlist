@@ -5,20 +5,30 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:list_id])
   end
 
   # GET /movies/1
   # GET /movies/1.json
   def show
+    @user = User.find(params[:user_id])
+    @movie = Movie.find(params[:id])
+    @list = List.find(params[:list_id])
   end
 
   # GET /movies/new
   def new
     @movie = Movie.new
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:list_id])
   end
 
   # GET /movies/1/edit
   def edit
+    @movie = Movie.find(params[:id])
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:list_id])
   end
 
   # POST /movies
@@ -56,7 +66,7 @@ class MoviesController < ApplicationController
   def destroy
     @movie.destroy
     respond_to do |format|
-      format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }
+      format.html { redirect_to user_list_movies_path, notice: 'Movie was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
