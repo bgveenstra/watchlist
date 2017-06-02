@@ -17,9 +17,13 @@
         <h1>Watchlist</h1>
         </div>
         <div class="col-md-2 float-right">
-            <strong><%= link_to "Sign up", new_user_registration_path %></strong>
+        
+        <%- if user_signed_in? %>
+          <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
+          <% else %>
             <strong><%= link_to "Login", new_user_session_path %></strong>
-            <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
+          <% end %> 
+            
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
         </div>
