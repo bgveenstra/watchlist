@@ -5,7 +5,7 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     @user = User.find(params[:user_id])
-    @lists = List.all
+    @lists = @user.lists.all
   end
 
   # GET /lists/1
