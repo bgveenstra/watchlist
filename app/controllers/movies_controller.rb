@@ -5,6 +5,8 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:list_id])
   end
 
   # GET /movies/1
@@ -16,6 +18,8 @@ class MoviesController < ApplicationController
   # GET /movies/new
   def new
     @movie = Movie.new
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:list_id])
   end
 
   # GET /movies/1/edit
