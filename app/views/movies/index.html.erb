@@ -12,9 +12,9 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= link_to 'Show', movie.title %></td>
-        <td><%= link_to 'Edit', edit_user_list_movie_path(movie.title) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_list_movie_path(@user, @list, movie.id) %></td>
+        <td><%= link_to 'Edit', edit_user_list_movie_path(@user, @list, movie.id) %></td>
+        <td><%= link_to 'Destroy', user_list_movie_path(@user, @list, movie), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
 
@@ -23,4 +23,4 @@
 
 <br>
 
-<%= link_to 'New Movie', new_movie_path %>
+<%= link_to 'New Movie', new_user_list_movie_path %>
