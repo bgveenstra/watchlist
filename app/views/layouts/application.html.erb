@@ -10,9 +10,7 @@
 
   <body>
 
-	<li><%= link_to "Profile", current_user %></li>
-    <strong><%= link_to "Sigasdfasn up", new_user_registration_path %></strong>
-    <strong><%= link_to "Signasdf in", new_user_session_path %></strong>
+    <strong><%= link_to "Profile", current_user %></strong>
     <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
