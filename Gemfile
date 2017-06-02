@@ -12,10 +12,10 @@ gem 'rails', '~> 5.1.1'
 gem 'pg'
 
 # Use Puma as the app server
-# gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.7'
 
 # User Passenger as app server
-gem 'passenger', ">= 5.0.25", require: "phusion_passenger/rack_handler"
+# gem 'passenger', ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -60,7 +60,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'better_errors'
+  # gem 'better_errors'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
