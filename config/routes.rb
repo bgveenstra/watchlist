@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :movies
     end
   end
-  # root "application#index"
+  root "/welcome/users/sign_up"
 
   devise_for :users, :path_prefix => 'welcome', :controllers => { registrations: 'registrations' }
 
