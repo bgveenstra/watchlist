@@ -4,21 +4,27 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.json
   def index
+    @user = User.find(params[:user_id])
     @lists = List.all
   end
 
   # GET /lists/1
   # GET /lists/1.json
   def show
+    @user = User.find(params[:user_id])
+    @list = List.find(params[:id])
+    render :show
   end
 
   # GET /lists/new
   def new
     @list = List.new
+    @user = User.find(params[:user_id]).id
   end
 
   # GET /lists/1/edit
   def edit
+    @list = List.find(params[:id])
   end
 
   # POST /lists
