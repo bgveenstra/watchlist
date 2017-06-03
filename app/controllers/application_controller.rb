@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource_or_scope)
-    current_user
+    user_lists_path(@user)
   end
 
   def after_sign_up_path_for(resource_or_scope)
