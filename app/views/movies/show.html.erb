@@ -3,8 +3,6 @@
 <h1><%= @movie.title %></h1>
 
 <div class="container">
-	<%= link_to 'Edit', edit_user_list_movie_path(@movie) %> |
-  <%= link_to 'Back', user_lists_path %>
+	<%= link_to 'Edit', edit_user_list_movie_path(@user, @list, @movie) %> |
+  <%= link_to 'Back', user_list_movies_path %>
 </div>
-
-
