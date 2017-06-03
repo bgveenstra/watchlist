@@ -1,4 +1,4 @@
- <%= form_with url: new_user_list_movie_url(@user, @list)  do |form| %>
+ <%= form_with url: { action: "create" }  do |form| %>
    <% if movie.errors.any? %>
      <div id="error_explanation">
        <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>

@@ -15,6 +15,7 @@ class MoviesController < ApplicationController
     @user = User.find(params[:user_id])
     @movie = Movie.find(params[:id])
     @list = List.find(params[:list_id])
+    render :show
   end
 
   # GET /movies/new
@@ -38,7 +39,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       if @movie.save
-        format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
+        format.html { redirect_to user_list_movies_url, notice: 'Movie was successfully created.' }
         format.json { render :show, status: :created, location: @movie }
       else
         format.html { render :new }
@@ -52,7 +53,7 @@ class MoviesController < ApplicationController
   def update
     respond_to do |format|
       if @movie.update(movie_params)
-        format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
+        format.html { redirect_to redirect_to user_list_movies_url, notice: 'Movie was successfully updated.' }
         format.json { render :show, status: :ok, location: @movie }
       else
         format.html { render :edit }
@@ -79,6 +80,7 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.fetch(:movie, {})
+      # params.fetch(:movie, {})
+      # params.permit(:title, :director, :synopsis, :image, :year, :runtime, :rating)
     end
 end
