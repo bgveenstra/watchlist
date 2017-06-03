@@ -76,6 +76,6 @@ class ListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params.fetch(:list, {})
+      params.permit(:name, :user_id)
     end
 end

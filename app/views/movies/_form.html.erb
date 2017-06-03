@@ -10,8 +10,34 @@
        </ul>
      </div>
    <% end %>
-
-
+   <div class="field">
+   <%= form.label :title %><br />
+   <%= form.text_field :title %>
+   </div>
+   <div class="field">
+   <%= form.label :director %><br />
+   <%= form.text_field :director %>
+   </div>
+   <div class="field">
+   <%= form.label :synopsis %><br />
+   <%= form.text_field :synopsis %>
+   </div>
+   <div class="field">
+   <%= form.label :image %><br />
+   <%= form.text_field :image %>
+   </div>
+   <div class="field">
+   <%= form.label :year %><br />
+   <%= form.text_field :year %>
+   </div>
+   <div class="field">
+   <%= form.label :runtime %><br />
+   <%= form.text_field :runtime %>
+   </div>
+   <div class="field">
+   <%= form.label :rating %><br />
+   <%= form.text_field :rating %>
+   </div>
 
   <div class="actions">
     <%= form.submit %>
