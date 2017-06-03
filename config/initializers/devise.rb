@@ -248,6 +248,13 @@ Devise.setup do |config|
   config.sign_out_via = :delete
 
   # ==> OmniAuth
+
+  # Use integrating OAuth using Google accounts
+
+  config.omniauth :google_oauth2, ENV["225587889150-6csctslusmcud2d34keiffegeai5s246.apps.googleusercontent.com"], ENV["Cs6oAVvvM81afps9dDcWbH80"], {
+    scope: "email"
+  }
+
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
