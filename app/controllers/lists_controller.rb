@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /lists
   # GET /lists.json
   def index
@@ -47,9 +47,10 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
+    @list = List.find(params[:id])
     respond_to do |format|
-      if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
+      if @list.update_attributes(list_params)
+        format.html { redirect_to user_lists_url, notice: 'List was successfully updated.' }
         format.json { render :show, status: :ok, location: @list }
       else
         format.html { render :edit }
@@ -76,6 +77,6 @@ class ListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params.permit(:name, :user_id)
+      params.require(:list).permit(:name, :user_id)
     end
 end
