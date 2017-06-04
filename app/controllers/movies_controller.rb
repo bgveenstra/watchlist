@@ -35,7 +35,7 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    @movie = Movie.new(movie_params)
+    @movie = Movie.new(movie_params_create)
 
     respond_to do |format|
       if @movie.save
@@ -52,7 +52,7 @@ class MoviesController < ApplicationController
   # PATCH/PUT /movies/1.json
   def update
     respond_to do |format|
-      if @movie.update(movie_params)
+      if @movie.update(movie_params_update)
         format.html { redirect_to user_list_movies_url, notice: 'Movie was successfully updated.' }
         format.json { render :show, status: :ok, location: @movie }
       else
@@ -77,9 +77,13 @@ class MoviesController < ApplicationController
     def set_movie
       @movie = Movie.find(params[:id])
     end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def movie_params
+    # list param for create without require list
+    def movie_params_create
+      # params.fetch(:movie, {})
+      params.permit(:title, :director, :synopsis, :year, :runtime, :rating)
+    end
+    # list param for create without require list
+    def movie_params_update
       # params.fetch(:movie, {})
       params.require(:movie).permit(:title, :director, :synopsis, :year, :runtime, :rating)
     end
