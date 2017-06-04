@@ -24,9 +24,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/new
   def new
-    
     @movie = Movie.new
-
   end
 
   # GET /movies/1/edit
@@ -42,17 +40,19 @@ class MoviesController < ApplicationController
   # POST /movies.json
   def create
 
+    @user = set_user
+    @list = set_list
+
     @movie = Movie.create(movie_params)
 
-    respond_to do |format|
-      if @movie.save
-        format.html { redirect_to user_list_movies_url, notice: 'Movie was successfully created.' }
-        format.json { render :show, status: :created, location: @movie }
-      else
-        format.html { render :new }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
-      end
+    if @movie.save!
+      flash[:notice] = "Movie saved successfully!"
+      redirect_to user_list_movies_path
+    else
+      flash[:error] = @movie.errors.full_messages.join(", ")
+      redirect_to user_list_movies_path(@user, @list)
     end
+
   end
 
   # PATCH/PUT /movies/1
@@ -95,6 +95,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.permit(:title, :director, :synopsis, :image, :year, :runtime, :rating, :user_id, :list_id)
+      params.permit(:title, :director, :synopsis, :image, :year, :runtime, :rating)
     end
 end
