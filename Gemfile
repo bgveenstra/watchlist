@@ -37,7 +37,7 @@ gem 'devise', '~> 4.3'
 # gem 'redis', '~> 3.0'
 
 # OAuth integration to devise with Google
-gem 'omniauth-digitalocean'
+gem 'omniauth-google-oauth2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
