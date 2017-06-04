@@ -12,6 +12,7 @@
   <tbody>
     <% @lists.each do |list| %>
       <tr>
+        <td><%= list.name %></td>
         <td><%= link_to 'Show', user_list_movies_path(@user,list) %></td>
         <td><%= link_to 'Edit', edit_user_list_path(@user,list) %></td>
         <td><%= link_to 'Destroy', user_list_path(@user,list), method: :delete, data: { confirm: 'Are you sure?' } %></td>
