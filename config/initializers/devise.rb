@@ -1,3 +1,5 @@
+
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -278,7 +280,8 @@ Devise.setup do |config|
 
   # Use integrating OAuth using Google accounts
 
-  config.omniauth :google_oauth2, ENV["225587889150-6csctslusmcud2d34keiffegeai5s246.apps.googleusercontent.com"], ENV["Cs6oAVvvM81afps9dDcWbH80"], {
+  require "omniauth-google-oauth2"
+  config.omniauth :google_oauth2, "225587889150-6csctslusmcud2d34keiffegeai5s246.apps.googleusercontent.com", "Cs6oAVvvM81afps9dDcWbH80", {
     scope: "email"
   }
   
