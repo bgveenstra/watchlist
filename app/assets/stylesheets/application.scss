@@ -14,11 +14,28 @@
  *= require_self
  */
 
-.form {
-	.field {
-		color: blue;
-	}
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Merriweather', serif;
+    }
+	
+body {
+	background-color: #242430;
 }
+
+#flicked {
+}
+
+#login {
+	font-family: arial;
+}
+
+#logout {
+	font-family: arial;
+}
+
 
 .footer {
 	text-align: center;
@@ -28,14 +45,72 @@
 .container {
 	padding-top: 30px;
 }
+ 
+.btn {
+	background-color: white;
+	color: #f0cb35;
+	border: none;
+	border-radius: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.buttonrow {
+	text-align: center;
+}
 
 #signup {
+	background-color: #5330a8;
+	color: white;
+	padding-bottom: 88px;
+	padding-top: 80px;
+	padding-left: 150px;
+	padding-right: 150px;
 
+	.actions {
+		color: black;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#collaspeExample {
+		padding-top: 10px;
+	}
+}
+
+.form-control {
+	background-color: transparent;
+	color: white;
+}
+
+#tutorial {
+	background-color: #313978;
+	color: white;
+	span {
+		color: #f0cb35;
+	}
+
+	img {
+		width: 105%;
+	}
 }
 
 .nav {
+	
+	background-color: #16151b;
+
+	#logging {
+		color: red;
+	}
+	
 	h1 {
-		color: violet;
+		color: #f0cb35;
+	}
+
+	.col-md-10 {
+		padding-left: 50px;
 	}
 
 	.notice {
@@ -46,3 +121,46 @@
 		color: red;
 	}
 }
+
+.field {
+	#field-login {
+		color: red;
+	}
+}
+
+#title {
+	color: white;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#bubbles {
+	text-align: center;
+	color: #f0cb35;
+	padding-bottom: 200px;
+}
+
+#login {
+	color: #f0cb35;
+	padding-left: 100px;
+	padding-right: 80px;
+
+	.field {
+		color: black;
+		padding-top: 10px;
+	}
+
+	.remember {
+		color: white;
+	}
+
+	.actions {
+		color: black;
+	}
+}
+
+.links {
+	color: #f0cb35;
+}
+
