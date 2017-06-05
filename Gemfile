@@ -10,8 +10,13 @@ end
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+
+# User Passenger as app server
+# gem 'passenger', ">= 5.0.25", require: "phusion_passenger/rack_handler"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,6 +35,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'devise', '~> 4.3'
 # gem 'redis', '~> 3.0'
+
+# OAuth integration to devise with Google
+gem 'omniauth-google-oauth2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,7 +63,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'better_errors'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
