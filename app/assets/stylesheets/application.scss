@@ -36,6 +36,7 @@ body {
 #signup {
 	background-color: #5330a8;
 	color: white;
+	padding-bottom: 30px;
 
 	.actions {
 		color: black;
@@ -43,6 +44,7 @@ body {
 		padding-bottom: 10px;
 	}
 }
+
 
 #tutorial {
 	background-color: #313978;
@@ -74,7 +76,9 @@ body {
 }
 
 .field {
-
+	#field-login {
+		color: red;
+	}
 }
 
 #title {
