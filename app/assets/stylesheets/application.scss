@@ -19,10 +19,11 @@
         padding: 0;
         box-sizing: border-box;
     }
-
+	
 body {
 	background-color: #242430;
 }
+
 
 .footer {
 	text-align: center;
@@ -36,17 +37,28 @@ body {
 #signup {
 	background-color: #5330a8;
 	color: white;
-	padding-bottom: 30px;
+	padding-bottom: 80px;
+	padding-top: 80px;
+	padding-left: 80px;
+	padding-right: 80px;
 
 	.actions {
 		color: black;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+
+	#collaspeExample {
+		padding-top: 10px;
+	}
 }
 
 
 #tutorial {
+	padding-bottom: 80px;
+	padding-top: 80px;
+	padding-left: 80px;
+	padding-right: 80px;
 	background-color: #313978;
 	color: white;
 	span {

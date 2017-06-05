@@ -1,72 +1,69 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6" id="tutorial">
-      <h2>Find Your New Favorite Flick.</h2>
-      <p>Keep track of your favorite films.</p>
-      <p>Share your must-sees with friends.</p>
-      <p>Discover your new favorite flicks</p>
-      <p>Get <span>Flick'd</span></p>
-    </div>
+<div class="row">
+  <div class="col-md-6" id="tutorial">
+    <h2>Find Your New Favorite Flick.</h2>
+    <p>Keep track of your favorite films.</p>
+    <p>Share your must-sees with friends.</p>
+    <p>Discover your new favorite flicks</p>
+    <p>Get <span>Flick'd</span></p>
+  </div>
 
-    <div class="col-md-6 float-right" id="signup">
-      <h1>Get Started!</h1>
-      <br>
-      <%= devise_error_messages! %>
-      <div class="form">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <div class="form-group">
-            <%= f.email_field :email, placeholder: "Email...", autofocus: true, class: "form-control" %>
-          </div>
+  <div class="col-md-6 float-right" id="signup">
+    <h1>Get Started!</h1>
+    <br>
+    <%= devise_error_messages! %>
+    <div class="form-group">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <div class="form-group">
+          <%= f.email_field :email, placeholder: "Email...", autofocus: true, class: "form-control" %>
+        </div>
 
-          <div class="form-group">
-            <% if @minimum_password_length %>
-            <%= f.password_field :password, placeholder: "Password...", autocomplete: "off", class: "form-control" %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
-          </div>
+        <div class="form-group">
+          <% if @minimum_password_length %>
+          <%= f.password_field :password, placeholder: "Password...", autocomplete: "off", class: "form-control" %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+        </div>
 
+        <div class="form-group">
+          <%= f.password_field :password_confirmation, placeholder: "Confirm Password...", autocomplete: "off", class: "form-control" %>
+        </div>
+        <br>
+        <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Sign Up
+        </a>
+        <div class="collapse" id="collapseExample">
           <div class="form-group">
-            <%= f.password_field :password_confirmation, placeholder: "Confirm Password...", autocomplete: "off", class: "form-control" %>
-          </div>
-          <br>
-          <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Sign Up
-          </a>
-          <div class="collapse" id="collapseExample">
-            <div class="field">
-              <div class="form-group">
-              <%= f.text_field :name, placeholder: "Name...", class: "form-control" %>
-            </div>
-            
             <div class="form-group">
-              <%= f.text_field :zip, placeholder: "Zip...", class: "form-control" %>
-            </div>
-            <div class="actions">
-              <%= f.submit "Continue", :class=>"btn btn-primary" %>
-            </div>
-            <% end %>
+            <%= f.text_field :name, placeholder: "Name...", class: "form-control" %>
           </div>
-      </div>
+          
+          <div class="form-group">
+            <%= f.text_field :zip, placeholder: "Zip...", class: "form-control" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Continue", :class=>"btn btn-primary" %>
+          </div>
+          <% end %>
+        </div>
     </div>
+  </div>
 </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h3 id="title">How It Works</h3>
-      <div class="row" id="bubbles">
-        <div class="col-md-4">
-          <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
-        </div>
-        <div class="col-md-4">
-          <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
-        </div>
-        <div class="col-md-4">
-          <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
-        </div>
+<div class="row">
+  <div class="col-md-12">
+    <h3 id="title">How It Works</h3>
+    <div class="row" id="bubbles">
+      <div class="col-md-4">
+        <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
+      </div>
+      <div class="col-md-4">
+        <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
+      </div>
+      <div class="col-md-4">
+        <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
       </div>
     </div>
   </div>
-
 </div>
 
 <div class="footer">
