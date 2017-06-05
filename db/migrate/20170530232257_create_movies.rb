@@ -7,6 +7,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.string  :director
       t.string  :synopsis
       t.string  :image
+      t.integer :list_id
       t.integer  :year
       t.integer  :runtime
       t.integer  :rating
