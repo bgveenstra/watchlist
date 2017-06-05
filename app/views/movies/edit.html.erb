@@ -1,8 +1,36 @@
 <h1>Editing Movie</h1>
 
-<!-- # <%= render 'form', movie: @movie %> -->
+<%= form_for @movie, url: user_list_movie_path(@user,@list,@movie) do |form| %>
+  <div class="field">
+  <%= form.label :title %><br />
+  <%= form.text_field :title %>
+  </div>
+  <div class="field">
+  <%= form.label :director %><br />
+  <%= form.text_field :director %>
+  </div>
+  <div class="field">
+  <%= form.label :synopsis %><br />
+  <%= form.text_area :synopsis %>
+  </div>
+  <div class="field">
+  <%= form.label :year %><br />
+  <%= form.text_field :year %>
+  </div>
+  <div class="field">
+  <%= form.label :runtime %><br />
+  <%= form.text_field :runtime %>
+  </div>
+  <div class="field">
+  <%= form.label :rating %><br />
+  <%= form.text_field :rating %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
-<%= link_to 'Show', user_list_movie_path %> |
-<%= link_to 'Back', user_list_movies_path %>
+<%= link_to 'Show', user_list_movies_path %> |
+<%= link_to 'Back', user_list_movies_path(@user,@list,@movie) %>
 
 <%= @movie.title %>

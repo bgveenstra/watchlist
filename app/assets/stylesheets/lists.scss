@@ -1,3 +1,140 @@
-// Place all the styles related to the lists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:900,900i|Roboto:300')
+
+///////////////
+// VARIABLES //
+///////////////
+
+$white: #ffffff;
+$iron: #23242F;
+$lilac: #e1bee7;
+
+
+///////////////
+// HTML TAGS //
+///////////////
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/////////
+// IDS //
+/////////
+
+#notice {
+
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	letter-spacing: 1px;
+	padding-left: 15px;
+	padding: 30px 0px 30px 15px;
+	color: $lilac;
+
+}
+
+
+/////////////
+// CLASSES //
+/////////////
+
+.list-h1 {
+
+	font-size: 52px;
+	font-family: 'Merriweather', serif;
+	font-weight: bolder;
+	color: $white;
+
+
+	& a {
+		text-decoration: none;
+		color: $white;
+	}
+
+	& a:hover {
+		text-decoration: none;
+		color: $lilac;
+	}
+
+}
+
+.list-h3 {
+
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	padding-left: 15px;
+	padding-bottom: 20px;
+	color: $white;
+
+
+}
+
+label {
+
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	color: $white;
+
+}
+
+.remember-me {
+
+	@extends label;
+	font-size: 13px;
+	letter-spacing: 4px;
+	padding-left: 5px;
+
+}
+
+input {
+
+	
+}
+
+.btn {
+
+	margin: 20px 10px 0px 10px;
+
+}
+
+.list-button {
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: 100;
+	padding: 20px;
+	border-radius: 50%;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: 2px white solid;
+    cursor:pointer;
+
+	& a {
+		text-decoration: none;
+		color: $white;
+	}
+
+	& a:hover {
+		text-decoration: none;
+		color: $lilac;
+	}
+
+}
+
+
+////////////
+// BLOCKS //
+////////////
+
+////////////////
+// ANIMATIONS //
+////////////////

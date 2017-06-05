@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MovieApp</title>
+    <title>Flick'd</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Merriweather',media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
   </head>
 
   <body>
 
 <div class="nav">
-    <div class="container">
+    
       <div class="row">
         <div class="col-md-10">
-        <h1>Watchlist</h1>
+        <h1>Flick'd</h1>
         </div>
-        <div class="col-md-2 float-right">
+
+        <div class="col-md-2 float-right" id="logbox">
         
         <%- if user_signed_in? %>
-          <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
+          <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete, :id=> "logout") %>
           <% else %>
-            <strong><%= link_to "Login", new_user_session_path %></strong>
+
+            <%= link_to 'LOGIN', new_user_session_path, :id=> "login" %>
         <% end %> 
-            
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
         </div>
       </div>
-    </div>
+    
   </div>
-
     <%= yield %>
   </body>
 </html>

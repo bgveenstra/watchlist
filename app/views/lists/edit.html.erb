@@ -1,6 +1,26 @@
-<h1>Editing List</h1>
+<div id="list-container" class="container">
+  <div class="row">
 
-<%= render 'form', list: @list %>
 
-<%= link_to 'Show', user_list_path %> |
-<%= link_to 'Back', user_lists_path %>
+		<h3 class="list-h3">Editing List</h3>
+
+		<%= form_for @list, url: user_list_path(@user,@list) do |form| %>
+		  <div class="field">
+		    <h5 class="list-h5"><%= form.label :name %></h5>
+		    <br />
+		    <%= form.text_field :name , class: "form-control" %>
+		  </div>
+		  <div class="actions">
+		    <button class="btn"><%= form.submit %></button>
+		  </div>
+		<% end %>
+
+		<button class="btn"><%= link_to 'Show', user_list_path %> </button>
+		<button class="btn"><%= link_to 'Back', user_lists_path %> </button>
+
+	</div>
+</div>
+
+
+
+
