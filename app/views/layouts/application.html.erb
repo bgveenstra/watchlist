@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   </head>
 
   <body>
@@ -19,9 +20,9 @@
         <div class="col-md-2 float-right">
         
         <%- if user_signed_in? %>
-          <strong><%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %> </strong>
+          <strong><%= link_to('LOGOUT', destroy_user_session_path, :method => :delete, :id=> "logout") %> </strong>
           <% else %>
-            <strong><%= link_to 'LOGIN', new_user_session_path %></strong>
+            <strong><%= link_to 'LOGIN', new_user_session_path, :id=> "login"  %></strong>
         <% end %> 
             
             <p class="notice"><%= notice %></p>
