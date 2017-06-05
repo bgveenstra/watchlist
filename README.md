@@ -4,7 +4,7 @@ The app that allows the user to create unique movie lists that can be shared bet
 
 Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
-![Flick'd](/assets/to/flickd_home.jpg)
+![Flick'd](/assets/images/flickd_home.png)
 
 # Tools
 
@@ -22,7 +22,7 @@ Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 3. Create New List of Movies
 4. Add Movies from our Database to your lists
 5. Save Each lists
-6. Flick you lists to other users by sharing
+6. Flick your lists to other users by sharing
 
 
 # Bugs
