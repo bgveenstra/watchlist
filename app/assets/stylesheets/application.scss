@@ -11,19 +11,49 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap.min
+ *= require main.scss
+ *= require lists.scss
+ *= require movies.scss
+ *= require users.scss
  *= require_self
  */
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,900');
+
+
+
+/* @font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(font-path('glyphicons-halflings-regular.eot'));
+  src: url(font-path('glyphicons-halflings-regular.eot?#iefix')) format('embedded-opentype'),
+       url(font-path('glyphicons-halflings-regular.woff2')) format('woff2'),
+       url(font-path('glyphicons-halflings-regular.woff')) format('woff'),
+       url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'),
+       url(font-path('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')) format('svg');
+} */
+
+
  * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Merriweather', serif;
     }
-
+	
 body {
 	background-color: #242430;
   font-family: 'Merriweather Black', 'Merriweather';
 }
+
+#flicked {
+}
+
+#login {
+	font-family: arial;
+}
+
+#logout {
+	font-family: arial;
+}
+
 
 .footer {
 	text-align: center;
@@ -33,16 +63,44 @@ body {
 .container {
 	padding-top: 30px;
 }
+ 
+.btn {
+	background-color: white;
+	color: #f0cb35;
+	border: none;
+	border-radius: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.buttonrow {
+	text-align: center;
+}
 
 #signup {
 	background-color: #5330a8;
 	color: white;
+	padding-bottom: 88px;
+	padding-top: 80px;
+	padding-left: 150px;
+	padding-right: 150px;
 
 	.actions {
 		color: black;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+
+	#collaspeExample {
+		padding-top: 10px;
+	}
+}
+
+.form-control {
+	background-color: transparent;
+	color: white;
 }
 
 #tutorial {
@@ -50,6 +108,10 @@ body {
 	color: white;
 	span {
 		color: #f0cb35;
+	}
+
+	img {
+		width: 105%;
 	}
 }
 
@@ -65,6 +127,10 @@ body {
 		color: #f0cb35;
 	}
 
+	.col-md-10 {
+		padding-left: 50px;
+	}
+
 	.notice {
 		color: red;
 	}
@@ -75,7 +141,9 @@ body {
 }
 
 .field {
-
+	#field-login {
+		color: red;
+	}
 }
 
 #title {
@@ -87,11 +155,14 @@ body {
 
 #bubbles {
 	text-align: center;
+	color: #f0cb35;
+	padding-bottom: 200px;
 }
 
 #login {
-	color: white;
+	color: #f0cb35;
 	padding-left: 100px;
+	padding-right: 80px;
 
 	.field {
 		color: black;
@@ -106,3 +177,9 @@ body {
 		color: black;
 	}
 }
+
+
+.links {
+	color: #f0cb35;
+}
+

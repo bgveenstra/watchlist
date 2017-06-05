@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @movie.title %></h1>
+<h3><%= @movie.title %></h3>
+<h3><%= @movie.director %></h3>
+<h3><%= @movie.synopsis %></h3>
+<h3><%= @movie.year %></h3>
+<h3><%= @movie.runtime %></h3>
+<h3><%= @movie.rating %></h3>
 
 <div class="container">
-	<%= link_to 'Edit', edit_user_list_movie_path(@movie) %> |
-  <%= link_to 'Back', user_lists_path %>
+	<%= link_to 'Edit', edit_user_list_movie_path(@user, @list, @movie) %> |
+  <%= link_to 'Back', user_list_movies_path %>
 </div>
-
-
