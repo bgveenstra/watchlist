@@ -11,8 +11,23 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap.min
+ *= require main.scss
+ *= require lists.scss
+ *= require movies.scss
+ *= require users.scss
  *= require_self
  */
+
+
+/* @font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(font-path('glyphicons-halflings-regular.eot'));
+  src: url(font-path('glyphicons-halflings-regular.eot?#iefix')) format('embedded-opentype'),
+       url(font-path('glyphicons-halflings-regular.woff2')) format('woff2'),
+       url(font-path('glyphicons-halflings-regular.woff')) format('woff'),
+       url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'),
+       url(font-path('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')) format('svg');
+} */
 
  * {
         margin: 0;
@@ -163,4 +178,3 @@ body {
 .links {
 	color: #f0cb35;
 }
-
