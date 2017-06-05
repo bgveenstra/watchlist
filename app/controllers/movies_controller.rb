@@ -4,9 +4,11 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
     @user = User.find(params[:user_id])
     @list = List.find(params[:list_id])
+    movie_list = List.find(params[:list_id])
+    @movies = movie_list.movies
+    # @movies = Movie.joins(list: :user).where(users: {id: @user.id}, lists: {id: @list.id})
   end
 
   # GET /movies/1

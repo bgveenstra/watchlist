@@ -5,7 +5,7 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     @user = User.find(params[:user_id])
-    @lists = @user.lists.all
+    @lists = @user.lists
   end
 
   # GET /lists/1
@@ -75,11 +75,11 @@ class ListsController < ApplicationController
     end
     # list param for create without require list
     def list_params_create
-      params.permit(:name, :user_id)
+      params.permit(:name, :user_id, lists_attributes: [:name, :user_id])
     end
     # list params for update with require list
     def list_params_update
-      params.require(:list).permit(:name, :user_id)
+      params.require(:list).permit(:name, :user_id, lists_attributes: [:id,  :_destroy])
     end
 
 end
