@@ -5,7 +5,7 @@
 
     </div>
     <div class="col-md-4" id="login">
-      <h3>Welcome Back!</h3>
+      <em><h4>Welcome Back!</h4></em>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
@@ -23,7 +23,7 @@
         <% end -%>
         <br>
         <div class="actions">
-          <%= f.submit "Log in", :class=>"btn btn-primary" %>
+          <%= f.submit "Log in", :class=>"btn btn-primary"%>
         </div>
         <br>
       <% end %>
