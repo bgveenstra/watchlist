@@ -1,16 +1,18 @@
-<p id="notice"><%= notice %></p>
+
 
 <div id="list-container" class="container">
   <div class="row">
 
-    <h3>My Lists</h3>
+    <p id="notice"><%= notice %></p>
+
+    <h3 class='list-h3'>My Lists</h3>
 
     <% @lists.each do |list| %>
 
       <div id="list-container" class="container">
         <div class="row">
       
-            <h1 class="col-md-8"><%= link_to list.name, user_list_movies_path(@user,list) %></h1>
+            <h1 class="list-h1 col-md-8"><%= link_to list.name, user_list_movies_path(@user,list) %></h1>
             <button class="btn col-md-1 align-baseline"><%= link_to 'Edit', edit_user_list_path(@user,list) %></button>
             <button class="btn col-md-1 align-baseline"><%= link_to 'Delete', user_list_path(@user,list), method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </div>

@@ -2,9 +2,6 @@ class MoviesController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :set_list, only: [:show, :edit, :update, :destroy]
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-
-
-
   # GET /movies
   # GET /movies.json
   def index
@@ -13,7 +10,6 @@ class MoviesController < ApplicationController
     target_movies = Movie.where(list_id: params[:list_id])
     @movies = Array(target_movies)
   end
-
   # GET /movies/1
   # GET /movies/1.json
   def show
@@ -21,21 +17,16 @@ class MoviesController < ApplicationController
     @list = set_list
     @movie = set_movie
   end
-
   # GET /movies/new
   def new
     @movie = Movie.new
   end
-
   # GET /movies/1/edit
   def edit
-
     @user = set_user
     @list = set_list
     @movie = set_movie
-
   end
-
   # POST /movies
   # POST /movies.json
   # def create
@@ -52,10 +43,8 @@ class MoviesController < ApplicationController
   #   end
   #
   # end
-
   def create
     @movie = Movie.new(movie_params_create)
-
     respond_to do |format|
       if @movie.save
         format.html { redirect_to user_list_movies_url, notice: 'Movie was successfully created.' }
@@ -66,7 +55,6 @@ class MoviesController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /movies/1
   # PATCH/PUT /movies/1.json
   def update
@@ -80,7 +68,6 @@ class MoviesController < ApplicationController
       end
     end
   end
-
   # DELETE /movies/1
   # DELETE /movies/1.json
   def destroy
@@ -90,7 +77,6 @@ class MoviesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie

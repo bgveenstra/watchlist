@@ -8,30 +8,25 @@ class ListsController < ApplicationController
     user = set_user
     @lists = user.lists.all
   end
-
   # GET /lists/1
   # GET /lists/1.json
   def show
     @user = set_user
     @list = set_list
   end
-
   # GET /lists/new
   def new
     @list = List.new
   end
-
   # GET /lists/1/edit
   def edit
     @user = set_user
     @list = set_list
   end
-
   # POST /lists
   # POST /lists.json
   def create
     @list = List.new(list_params_create)
-
     if @list.save!
       flash[:notice] = "List saved successfully!"
       redirect_to user_lists_path
@@ -39,9 +34,7 @@ class ListsController < ApplicationController
       flash[:error] = @list.errors.full_messages.join(", ")
       redirect_to user_lists_path(@user)
     end
-
   end
-
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
@@ -55,7 +48,6 @@ class ListsController < ApplicationController
       end
     end
   end
-
   # DELETE /lists/1
   # DELETE /lists/1.json
   def destroy
@@ -65,7 +57,6 @@ class ListsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_list
