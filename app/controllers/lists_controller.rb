@@ -1,31 +1,30 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
   # GET /lists
   # GET /lists.json
   def index
-    @user = User.find(params[:user_id])
-    @lists = @user.lists
+    user = set_user
+    @lists = user.lists.all
   end
 
   # GET /lists/1
   # GET /lists/1.json
   def show
-    @user = User.find(params[:user_id])
-    @list = List.find(params[:id])
-    render :show
+    @user = set_user
+    @list = set_list
   end
 
   # GET /lists/new
   def new
     @list = List.new
-    @user = User.find(params[:user_id]).id
   end
 
   # GET /lists/1/edit
   def edit
-    @user = User.find(params[:user_id])
-    @list = List.find(params[:id])
+    @user = set_user
+    @list = set_list
   end
 
   # POST /lists
@@ -33,15 +32,14 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params_create)
 
-    respond_to do |format|
-      if @list.save
-        format.html { redirect_to user_lists_url, notice: 'List was successfully created.' }
-        format.json { render :show, status: :created, location: @list }
-      else
-        format.html { render :new }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
+    if @list.save!
+      flash[:notice] = "List saved successfully!"
+      redirect_to user_lists_path
+    else
+      flash[:error] = @list.errors.full_messages.join(", ")
+      redirect_to user_lists_path(@user)
     end
+
   end
 
   # PATCH/PUT /lists/1
@@ -81,5 +79,7 @@ class ListsController < ApplicationController
     def list_params_update
       params.require(:list).permit(:name, :user_id, lists_attributes: [:id,  :_destroy])
     end
-
+    def set_user
+      @user = User.find(params[:user_id])
+    end
 end
