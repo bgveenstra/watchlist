@@ -1,24 +1,46 @@
-# README
+# FLICK'D
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app that allows the user to create unique movie lists that can be shared between user connections and friends.
 
-Things you may want to cover:
+Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
-* Ruby version
+![ScreenShot](flickd_home.png)
 
-* System dependencies
+# Tools
 
-* Configuration
+* Ruby 2.4.0
+* Ruby on Rails 5.1.1
+* Gems: Devise, jQuery-rails, sass-rails
+* jQuery and Bootstrap
+* Configuration: Nested Routes
+* Database creation: postgresql
 
-* Database creation
+# Guides to Use
 
-* Database initialization
+1. New Account Setup via signup page
+2. Add Account Profile info
+3. Create New List of Movies
+4. Add Movies from our Database to your lists
+5. Save Each lists
+6. Flick your lists to other users by sharing
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Bugs
 
-* Deployment instructions
+* Adding class to Devise forms for styling purposes
+* Nested Routes needed to be re-pathed after using Gem Scaffold
+* New lists creates two identical lists in Database
+* New Movies creates two identical movies in the Database
+* Sign up view button creates two forms and makes css drop lower
 
-* ...
+# Stretch Goals
+* External API (The Movie DB using Gem: 'tmdb-api')
+* Flicking/sharing unique URLs
+* Friends and Followers social media impact
+* Adding Movie Trailers for individual movies (via API)
+
+# Team
+* Sejin P. [Github](https://github.com/sejinpark0209)
+* Kevin T. [Github](https://github.com/kwadrnt)
+* Will F. [Github](https://github.com/promethwill88)
+* Mahmoud B. [Github](https://github.com/mickmacks)
