@@ -4,7 +4,7 @@ The app that allows the user to create unique movie lists that can be shared bet
 
 Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
-![Flick'd](https://ga-students.slack.com/files/promethwill88/F5NUGGB7F/screen_shot_2017-06-05_at_10.24.16_am.png)
+![Flick'd](https://www.dropbox.com/s/47sr7h6id5hkxjf/Screen%20Shot%202017-06-05%20at%2010.34.43%20AM.png?dl=0)
 
 # Tools
 
@@ -27,6 +27,17 @@ Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
 # Bugs
 
+* Adding class to Devise forms for styling purposes
+* Nested Routes needed to be re-pathed after using Gem Scaffold
+* New lists creates two identical lists in Database
+* New Movies creates two identical movies in the Database
+* Sign up view button creates two forms and makes css drop lower
+
+# Stretch Goals
+* External API (The Movie DB using Gem: 'tmdb-api')
+* Flicking/sharing unique URLs
+* Friends and Followers social media impact
+* Adding Movie Trailers for individual movies (via API)
 
 # Team
 * Sejin P. [Github](https://github.com/sejinpark0209)
