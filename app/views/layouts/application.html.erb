@@ -4,8 +4,9 @@
     <title>MovieApp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Merriweather',media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -17,13 +18,13 @@
         <h1>Flick'd</h1>
         </div>
         <div class="col-md-2 float-right">
-        
+
         <%- if user_signed_in? %>
           <strong><%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %> </strong>
           <% else %>
             <strong><%= link_to 'LOGIN', new_user_session_path %></strong>
-        <% end %> 
-            
+        <% end %>
+
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
         </div>
