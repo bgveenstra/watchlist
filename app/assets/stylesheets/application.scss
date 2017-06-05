@@ -74,7 +74,7 @@ body {
 }
 
 .field {
-	background-color: blue;
+
 }
 
 #title {
@@ -88,7 +88,23 @@ body {
 	text-align: center;
 }
 
+#login {
+	color: white;
+	padding-left: 100px;
 
+	.field {
+		color: black;
+		padding-top: 10px;
+	}
+
+	.remember {
+		color: white;
+	}
+
+	.actions {
+		color: black;
+	}
+}
 
 
 
