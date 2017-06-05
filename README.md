@@ -4,7 +4,7 @@ The app that allows the user to create unique movie lists that can be shared bet
 
 Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
-![Flick'd](https://www.dropbox.com/s/47sr7h6id5hkxjf/Screen%20Shot%202017-06-05%20at%2010.34.43%20AM.png?dl=0)
+![ScreenShot](flickd_home.png)
 
 # Tools
 
