@@ -11,38 +11,19 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap.min
+ *= require main.scss
+ *= require lists.scss
+ *= require movies.scss
+ *= require users.scss
  *= require_self
  */
 
-.form {
-	.field {
-		color: blue;
-	}
-}
-
-.footer {
-	text-align: center;
-	padding-top: 50px;
-}
-
-.container {
-	padding-top: 30px;
-}
-
-#signup {
-
-}
-
-.nav {
-	h1 {
-		color: violet;
-	}
-
-	.notice {
-		color: red;
-	}
-
-	.alert {
-		color: red;
-	}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(font-path('glyphicons-halflings-regular.eot'));
+  src: url(font-path('glyphicons-halflings-regular.eot?#iefix')) format('embedded-opentype'),
+       url(font-path('glyphicons-halflings-regular.woff2')) format('woff2'),
+       url(font-path('glyphicons-halflings-regular.woff')) format('woff'),
+       url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'),
+       url(font-path('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')) format('svg');
 }

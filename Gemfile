@@ -36,8 +36,7 @@ gem 'devise', '~> 4.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# themoviedb-api
-gem 'themoviedb-api'
+gem 'bootstrap-sass'
 
 
 group :development, :test do

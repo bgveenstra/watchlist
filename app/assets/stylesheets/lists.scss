@@ -1,3 +1,121 @@
-// Place all the styles related to the lists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:900,900i|Roboto:300')
+
+///////////////
+// VARIABLES //
+///////////////
+
+$white: #ffffff;
+$iron: #23242F;
+$lilac: #e1bee7;
+
+
+///////////////
+// HTML TAGS //
+///////////////
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+
+	background-color: $iron;
+
+}
+
+h1 {
+
+	font-size: 52px;
+	font-family: 'Merriweather', serif;
+	font-weight: bolder;
+	color: $white;
+
+
+	& a {
+		text-decoration: none;
+		color: $white;
+	}
+
+	& a:hover {
+		text-decoration: none;
+		color: $lilac;
+	}
+
+}
+
+h2 {
+
+
+}
+
+h3 {
+
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	padding-left: 15px;
+	padding-bottom: 20px;
+	color: $white;
+
+
+}
+
+h4 {
+
+
+}
+
+h5 {
+
+
+}
+
+button {
+
+	@extend h3;
+	color: $white;
+	font-size: 13px;
+	padding: 20px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid $white;
+
+	& a {
+		text-decoration: none;
+		color: $white;
+	}
+
+	& a:hover {
+		text-decoration: none;
+		color: $lilac;
+	}
+
+}
+
+
+
+
+/////////
+// IDS //
+/////////
+
+/////////////
+// CLASSES //
+/////////////
+
+.edit-buttons {
+
+}
+
+////////////
+// BLOCKS //
+////////////
+
+////////////////
+// ANIMATIONS //
+////////////////
