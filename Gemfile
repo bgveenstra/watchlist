@@ -47,6 +47,9 @@ gem 'omniauth-google-oauth2'
 
 gem 'bootstrap-sass'
 
+# # Google Fonts in Rails
+# gem 'google-webfonts-rails', '~> 0.0.4'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MovieApp</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="0DPaaNEf+mRP2qJSbCyzfNjAbaLsSGI3ZPyzspf8Bu/AW2bjtqDW/drGeTBn2DiXbS9YpcTAwLBihIMFl3y9Ag==" />
+
+    <link rel="stylesheet" media="all" href="/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-64854c3f47589f9a224bb23803fe774a39afdca2381c0d520098ef3aa51d2cc3.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Merriweather" data-turbolinks-track="reload" />
+    <script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/rails-ujs.self-56055fe2ac3f3902deb9d12c17b2d725d432162b48fc443946daf7dfbc96d88a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-5e866087125b4eb5e02a8365d73cdaeb7f2127bbb3f479fb54ab3ddb0d5c66af.js?body=1" data-turbolinks-track="reload"></script>
+
+  </head>
+
+  <body>
+
+<div class="nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+        <h1>Flick'd</h1>
+        </div>
+        <div class="col-md-2 float-right">
+
+            <strong><a href="/welcome/users/sign_in">LOGIN</a></strong>
+
+            <p class="notice"></p>
+            <p class="alert"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6" id="tutorial">
+      <img src="/assets/flickd_home-51b8ce8c0de695f033e049f8186583f33ccf2634cddb4fc7cef5bdf10614c7f5.png" alt="Flickd home" />
+
+    </div>
+
+
+    <div class="col-md-6 float-right" id="signup">
+      <h1>Get Started!</h1>
+      <br>
+      
+      <div class="form">
+        <form class="new_user" id="new_user" action="/welcome/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="hVB5M97hleGuAMIs31nJ1yd6LIUOt+oBwL1QzjkCnJtYRhieAZlCxjWpa13GLNoQOwGZUFmCukzYt0JVn04M9Q==" />
+          <div class="field">
+            <input placeholder="Email..." autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
+          </div>
+
+          <div class="field">
+            <input placeholder="Password..." autocomplete="off" type="password" name="user[password]" id="user_password" />
+            <em>(6 characters minimum)</em>
+            <br />
+          </div>
+
+          <div class="field">
+            <input placeholder="Confirm Password..." autocomplete="off" type="password" name="user[password_confirmation]" id="user_password_confirmation" />
+          </div>
+
+          <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Sign Up
+          </a>
+          <div class="collapse" id="collapseExample">
+            <div class="field">
+              <div class="field">
+              <input placeholder="Name..." type="text" name="user[name]" id="user_name" />
+            </div>
+
+            <div class="field">
+              <input placeholder="Zip..." type="text" name="user[zip]" id="user_zip" />
+            </div>
+            <div class="actions">
+              <input type="submit" name="commit" value="Continue" data-disable-with="Continue" />
+            </div>
+</form>          </div>
+      </div>
+    </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 id="title">How It Works</h3>
+      <div class="row" id="bubbles">
+        <div class="col-md-4">
+          <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
+        </div>
+        <div class="col-md-4">
+          <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
+        </div>
+        <div class="col-md-4">
+          <img src="http://www.fogosglobo.com.br/img/250x250-circle.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+</div>
+
+  </body>
+</html>

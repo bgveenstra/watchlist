@@ -19,6 +19,7 @@
  */
 
 
+
 /* @font-face {
   font-family: 'Glyphicons Halflings';
   src: url(font-path('glyphicons-halflings-regular.eot'));
@@ -29,6 +30,7 @@
        url(font-path('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')) format('svg');
 } */
 
+
  * {
         margin: 0;
         padding: 0;
@@ -38,6 +40,7 @@
 	
 body {
 	background-color: #242430;
+  font-family: 'Merriweather Black', 'Merriweather';
 }
 
 #flicked {
@@ -113,13 +116,13 @@ body {
 }
 
 .nav {
-	
+
 	background-color: #16151b;
 
 	#logging {
 		color: red;
 	}
-	
+
 	h1 {
 		color: #f0cb35;
 	}
@@ -175,6 +178,8 @@ body {
 	}
 }
 
+
 .links {
 	color: #f0cb35;
 }
+
