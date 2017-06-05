@@ -4,6 +4,8 @@ The app that allows the user to create unique movie lists that can be shared bet
 
 Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
+![Flick'd](/assets/to/flickd_home.jpg)
+
 # Tools
 
 * Ruby 2.4.0
@@ -27,7 +29,7 @@ Presented by General Assembly WDI #37 Team SKWM (Sejin, Kevin, Will, Mahmoud)
 
 
 # Team
-* Sejin [an example](https://github.com/sejinpark0209) inline link.
-* Kevin This is [an example](https://github.com/kwadrnt) inline link.
-* Will This is [an example](https://github.com/promethwill88) inline link.
-* Mahmoud [an example](https://github.com/mickmacks) inline
+* Sejin P. [Github](https://github.com/sejinpark0209)
+* Kevin T. [Github](https://github.com/kwadrnt)
+* Will F. [Github](https://github.com/promethwill88)
+* Mahmoud B. [Github](https://github.com/mickmacks)
