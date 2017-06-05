@@ -45,6 +45,21 @@ body {
 .container {
 	padding-top: 30px;
 }
+ 
+.btn {
+	background-color: white;
+	color: #f0cb35;
+	border: none;
+	border-radius: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.buttonrow {
+	text-align: center;
+}
 
 #signup {
 	background-color: #5330a8;
@@ -123,6 +138,7 @@ body {
 #bubbles {
 	text-align: center;
 	color: white;
+	padding-bottom: 200px;
 }
 
 #login {
