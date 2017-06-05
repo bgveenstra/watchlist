@@ -1,6 +1,14 @@
 <h1>Editing List</h1>
 
-<%= render 'form', list: @list %>
+<%= form_for @list, url: user_list_path(@user,@list) do |form| %>
+  <div class="field">
+    <%= form.label :name %><br />
+    <%= form.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Show', user_list_path %> |
 <%= link_to 'Back', user_lists_path %>
