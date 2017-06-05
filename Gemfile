@@ -39,8 +39,8 @@ gem 'devise', '~> 4.3'
 # themoviedb-api
 gem 'themoviedb-api'
 
-# Google Fonts in Rails
-gem 'google-webfonts-rails', '~> 0.0.4'
+# # Google Fonts in Rails
+# gem 'google-webfonts-rails', '~> 0.0.4'
 
 
 group :development, :test do
