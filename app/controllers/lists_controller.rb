@@ -30,7 +30,7 @@ class ListsController < ApplicationController
   # POST /lists
   # POST /lists.json
   def create
-    @list = List.create(list_params)
+    @list = List.new(list_params_create)
 
     if @list.save!
       flash[:notice] = "List saved successfully!"
@@ -46,8 +46,8 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1.json
   def update
     respond_to do |format|
-      if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
+      if @list.update(list_params_update)
+        format.html { redirect_to user_lists_url, notice: 'List was successfully updated.' }
         format.json { render :show, status: :ok, location: @list }
       else
         format.html { render :edit }
@@ -71,14 +71,15 @@ class ListsController < ApplicationController
     def set_list
       @list = List.find(params[:id])
     end
-
+    # list param for create without require list
+    def list_params_create
+      params.permit(:name, :user_id, lists_attributes: [:name, :user_id])
+    end
+    # list params for update with require list
+    def list_params_update
+      params.require(:list).permit(:name, :user_id, lists_attributes: [:id,  :_destroy])
+    end
     def set_user
       @user = User.find(params[:user_id])
     end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def list_params
-      params.permit(:name, :user_id)
-    end
-
 end
