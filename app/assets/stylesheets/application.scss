@@ -14,10 +14,14 @@
  *= require_self
  */
 
-.form {
-	.field {
-		color: blue;
-	}
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+body {
+	background-color: #242430;
 }
 
 .footer {
@@ -30,12 +34,34 @@
 }
 
 #signup {
+	background-color: #5330a8;
+	color: white;
 
+	.actions {
+		color: black;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+#tutorial {
+	background-color: #313978;
+	color: white;
+	span {
+		color: #f0cb35;
+	}
 }
 
 .nav {
+	
+	background-color: #16151b;
+
+	#logging {
+		color: red;
+	}
+	
 	h1 {
-		color: violet;
+		color: #f0cb35;
 	}
 
 	.notice {
@@ -46,4 +72,9 @@
 		color: red;
 	}
 }
+
+
+
+
+
 

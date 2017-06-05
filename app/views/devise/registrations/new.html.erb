@@ -1,16 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <h1>Welcome to Watchlist!</h1>
-      <ul>
-        <li>1.</li>
-        <li>2.</li>
-        <li>3.</li>    
-      </ul>
+    <div class="col-md-6" id="tutorial">
+      <h2>Find Your New Favorite Flick.</h2>
+      <p>Keep track of your favorite films.</p>
+      <p>Share your must-sees with friends.</p>
+      <p>Discover your new favorite flicks</p>
+      <p>Get <span>Flick'd</span></p>
     </div>
 
     <div class="col-md-6 float-right" id="signup">
-      <h1>Sign Up</h1>
+      <h1>Get Started!</h1>
       <br>
       <%= devise_error_messages! %>
       <div class="form">
@@ -37,25 +36,31 @@
           Proceed to Next
           </a>
           <div class="collapse" id="collapseExample">
-          <div class="well>
-            <!-- Change f.text_field to :name -->
+            <div class="well>
+              <div class="field">
+              <%= f.label :name %><br />
+              <%= f.text_field :name %>
+            </div>
+            
             <div class="field">
-            <%= f.label :name %><br />
-            <%= f.text_field :name %>
+              <%= f.label :zip %><br />
+              <%= f.text_field :zip %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Sign up" %>
+            </div>
+            <% end %>
           </div>
-          
-          <div class="field">
-            <%= f.label :zip %><br />
-            <%= f.text_field :zip %>
-          </div>
-          <div class="actions">
-            <%= f.submit "Sign up" %>
-          </div>
-        <% end %>
-
       </div>
     </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>How It Works</h3>
+    </div>
   </div>
+
 </div>
 
 <div class="footer">
